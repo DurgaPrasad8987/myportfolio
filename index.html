@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peddireddy Durga Prasadh - Portfolio</title>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    /* Google-inspired styles */
+    :root {
+      --google-blue: #4285f4;
+      --google-red: #ea4335;
+      --google-yellow: #fbbc05;
+      --google-green: #34a853;
+      --google-gray: #5f6368;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #202124;
+      line-height: 1.6;
+    }
+
+    .google-font {
+      font-family: 'Google Sans', sans-serif;
+    }
+
+    /* Navigation */
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+      padding: 8px 24px;
+    }
+
+    .nav-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--google-gray);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: var(--google-gray);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 24px;
+      transition: background 0.2s;
+    }
+
+    .nav-links a:hover {
+      background: #f1f3f4;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 120px 24px 80px;
+      background: #f8f9fa;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: #202124;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: var(--google-gray);
+      margin-bottom: 32px;
+    }
+
+    .google-button {
+      background: var(--google-blue);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 24px;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      margin: 8px;
+      transition: box-shadow 0.2s;
+    }
+
+    .google-button:hover {
+      box-shadow: 0 2px 6px rgba(66, 133, 244, 0.4);
+    }
+
+    /* Section Styles */
+    section {
+      padding: 80px 24px;
+    }
+
+    .section-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 32px;
+      color: #202124;
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    /* Cards */
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+      transition: box-shadow 0.2s;
+      margin-bottom: 24px;
+    }
+    
+    .card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .skill-card h3 {
+      color: var(--google-blue);
+      margin-bottom: 16px;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background: rgb(242, 248, 255);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .project-content {
+      padding: 24px;
+    }
+
+    .project-title {
+      color: #202124;
+      margin-bottom: 12px;
+    }
+
+    .project-description {
+      color: var(--google-gray);
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      background: #ffffff;
+      color: var(--google-gray);
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-size: 12px;
+      margin-right: 8px;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 32px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--google-gray);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--google-blue);
+    }
+
+    /* Footer */
+    footer {
+      background: #f8f9fa;
+      padding: 48px 24px;
+      text-align: center;
+    }
+
+    .social-links {
+      margin-top: 24px;
+    }
+
+    .social-links a {
+      color: var(--google-gray);
+      margin: 0 12px;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .social-links a:hover {
+      color: var(--google-blue);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+
+    .profile-picture-container {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-picture {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 0.2px solid white;
+      box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-picture:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-content">
+      <a href="#" class="nav-logo google-font">P. Durga Prasadh</a>
+      <div class="nav-links google-font">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="profile-picture-container">
+        <!-- Replace with your own picture if available -->
+        <img src="https://via.placeholder.com/250" alt="Peddireddy Durga Prasadh" class="profile-picture" />
+      </div>
+      <h1 class="google-font">Peddireddy Durga Prasadh</h1>
+      <p>AI & Data Science Student | Programmer</p>
+      <div>
+        <a href="mailto:durgaprasadhpeddireddy@gmail.com" class="google-button" style="background: #000000;">Contact Me</a>
+        <a href="https://www.linkedin.com/in/durga-prasadh-peddireddy-807634345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="google-button" style="background: #275ae7;">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-content">
+      <h2 class="section-title google-font">About Me</h2>
+      <div class="card">
+        <p>
+          I am an AI & Data Science student with a passion for programming and solving real-world problems. I hold a Diploma in Engineering from AANM & VVRSR POLYTECHNIC, GUDLAVALLERU. My journey in technology has enabled me to develop strong skills in C and Java while working on various projects and challenges.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" style="background: #f8f9fa;">
+    <div class="section-content">
+      <h2 class="section-title google-font">Education</h2>
+      <div class="card">
+        <h3 class="google-font">Diploma in Engineering</h3>
+        <p style="font-weight: 500;">AANM & VVRSR POLYTECHNIC, GUDLAVALLERU</p>
+        <p>2019 - 2022</p>
+        <p style="color: var(--google-gray);">CGPA: 7.77 | Percentage: 66.57%</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <div class="section-content">
+      <h2 class="section-title google-font">Experience</h2>
+      <div class="card">
+        <h3 class="google-font">Programmer</h3>
+        <p style="font-weight: 500;">Freelance / Intern</p>
+        <p>Worked on developing and maintaining software projects using C and Java. Contributed to both front-end and back-end development and collaborated with teams to build scalable solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" style="background: #f8f9fa;">
+    <div class="section-content">
+      <h2 class="section-title google-font">Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title google-font">Sample Project 1</h3>
+            <p class="project-description">
+              A brief description of a project detailing its purpose, technologies used, and your role in its development.
+            </p>
+            <div>
+              <span class="tag">Java</span>
+              <span class="tag">Backend</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="project-title google-font">Sample Project 2</h3>
+            <p class="project-description">
+              A brief description of another project with highlights of key features and development challenges.
+            </p>
+            <div>
+              <span class="tag">C</span>
+              <span class="tag">System Programming</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="section-content">
+      <h2 class="section-title google-font">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="card">
+          <h3 class="google-font">Programming Languages</h3>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex; align-items: center;">
+              <i class="fas fa-code" style="color: var(--google-blue); margin-right: 12px;"></i>
+              C
+            </div>
+            <div style="display: flex; align-items: center;">
+              <i class="fab fa-java" style="color: var(--google-blue); margin-right: 12px;"></i>
+              Java
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" style="background: #f8f9fa;">
+    <div class="section-content">
+      <h2 class="section-title google-font">Certifications</h2>
+      <div class="card">
+        <ul style="list-style-type: disc; margin-left: 24px;">
+          <li>EdX: Java Programming Fundamentals</li>
+          <li>EdX: Introduction to Internet of Things</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interests Section -->
+  <section id="interests">
+    <div class="section-content">
+      <h2 class="section-title google-font">Interests</h2>
+      <div class="card">
+        <p>
+          Outside of academics, I enjoy exploring new technologies, contributing to open source projects, and staying updated with the latest trends in AI, data science, and software development.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="background: #f8f9fa;">
+    <div class="section-content">
+      <h2 class="section-title google-font">Get In Touch</h2>
+      <div class="contact-form">
+        <form>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="google-button" style="width: 100%; border: none;">
+            Send Message
+          </button>
+        </form>
+      </div>
+      <div style="text-align: center; margin-top: 48px;">
+        <div style="margin-bottom: 24px;">
+          <p style="font-weight: 500; color: #202124;">Contact Information</p>
+          <p style="color: var(--google-gray);">
+            Feel free to reach out through any of these channels
+          </p>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;">
+          <a href="mailto:durgaprasadhpeddireddy@gmail.com" style="display: flex; align-items: center; text-decoration: none; color: var(--google-gray);">
+            <i class="fas fa-envelope" style="margin-right: 8px;"></i>
+            durgaprasadhpeddireddy@gmail.com
+          </a>
+          <a href="tel:+919392621310" style="display: flex; align-items: center; text-decoration: none; color: var(--google-gray);">
+            <i class="fas fa-phone" style="margin-right: 8px;"></i>
+            +91 9392621310
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="section-content">
+      <p style="color: var(--google-gray);">
+        &copy; <span id="year"></span> Peddireddy Durga Prasadh. All rights reserved.
+      </p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/durga-prasadh-peddireddy-807634345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/DurgaPrasad8987" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:durgaprasadhpeddireddy@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Form submission handling
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your message! I will get back to you soon.');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
